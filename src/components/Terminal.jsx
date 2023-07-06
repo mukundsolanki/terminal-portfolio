@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-// import Intro from './Intro';
+import Intro from './Intro';
 
 const Terminal = () => {
     const [input, setInput] = useState('');
@@ -65,7 +65,14 @@ const Terminal = () => {
             <div className="history">
                 {history.map((item, index) => (
                     <div key={index} className="history">
-                        <span className="command">user69@mukund.terminal.dev:~$ {item.input}</span>
+                        <span>
+                            <span className='user'>user69
+                                <span className='symbols'>@</span>
+                                mukund.terminal.dev:
+                                <span className='symbols'>~$</span>
+                            </span>
+                            <span className='commands'>{item.input}</span>
+                        </span>
                         <br />
                         <span className="output">{item.output}</span>
                         <div className="spacing"></div>
@@ -77,13 +84,15 @@ const Terminal = () => {
 
     return (
         <div className="terminal">
-            <pre className="ascii-art">THIS IS SOME ASCII ART</pre>
+            <Intro />
 
             {/* {renderOutput()} */}
-
-            {/* <p>user69@mukund.terminal.dev:~$ </p> */}
             {renderHistory()}
-            <p>user69@mukund.terminal.dev:~$ </p>
+            <span className='user'>user69
+                <span className='symbols'>@</span>
+                mukund.terminal.dev:
+                <span className='symbols'>~$</span>
+            </span>
             <form onSubmit={handleFormSubmit}>
                 <input
                     type="text"
