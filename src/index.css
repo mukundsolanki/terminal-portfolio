@@ -1,21 +1,24 @@
-@import url('https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=M+PLUS+2&display=swap");
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f15955;
+  border-radius: 4px;
+}
 
 body {
   margin: 0;
   padding-left: 10px;
   background-color: #282a36;
   color: #fff;
-  font-family: 'Ubuntu Mono', monospace;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
 
 .App {
   display: flex;
@@ -25,15 +28,12 @@ code {
 }
 
 .terminal {
-  /* border: 1px solid #fff; */
   padding: 10px;
-  /* width: 100%; */
   height: 100vh;
 }
 
-
 form {
-  margin-top: 10px;
+  margin-top: 5px;
   display: inline-block;
 }
 
@@ -42,44 +42,76 @@ input {
   border: none;
   outline: none;
   color: #fff;
-  font-family: 'M PLUS 2', sans-serif;
-  font-size: 14px;
-  /* width: 100%; */
   display: inline-block;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 18px;
 }
 
-.spacing{
-height: 10px;
+.spacing {
+  height: 10px;
 }
 
-.user,a {
+.user,
+a {
   color: #5dfa93;
   margin-right: 12px;
 }
 
-.symbols{
+.symbols {
   color: white;
 }
 
 .ascii-art {
-  font-size: 14px;
-  /* height: 100px; */
+  font-size: 10px;
+  margin: 0;
 }
 
-.commands{
+.commands {
   color: #f15955;
 }
 
-.about p{
+.about p {
   margin: 5px;
 }
 
-.help{
+.help {
   color: #cfd4e1c7;
-  margin: 3px 0px 0px 15px ;
+  margin: 3px 0px 0px 15px;
 }
 
-.input-text-custom {
-  font-family: 'Ubuntu Mono', monospace;
-  font-size: 18px;
+.skills {
+  color: rgb(235, 150, 97);
+}
+
+.skills-text {
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.projects-head {
+  color: #5dfa93;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+.projects-content {
+  margin: 0;
+  color: rgba(255, 196, 160, 0.66);
+}
+
+.terminal-spacing {
+  height: 200px;
+}
+
+.terminal-header {
+  background-color: #171717;
+  padding: 10px;
+  font-family: "Ubuntu Mono", monospace;
+  font-size: 16px;
+  border-top-left-radius: 5px; 
+  border-top-right-radius: 5px;
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-bottom: 10px;
 }
