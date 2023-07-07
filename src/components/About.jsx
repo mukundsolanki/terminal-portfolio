@@ -14,7 +14,7 @@ const About = () => {
         ~💻 As a developer, I enjoy working on various projects and exploring new technologies.</p>
       <p>
         ~🌟 Feel free to explore more by typing the "
-        <span className='commands'>education</span>",
+        <span className='commands'>github</span>",
         "<span className='commands'>skils</span>",
         "<span className='commands'>projects</span>"
         command in the terminal.
@@ -25,6 +25,7 @@ const About = () => {
       <p>
         ~⚡️ Let's connect and build something amazing together!
       </p>
+      <br />
       <p>For a list of available commands, type '<span className='commands'>help</span>'.</p>
     </div>
   );
