@@ -38,22 +38,22 @@ export default function Projects() {
         <div>
             <p>Click on the project to visit the project:</p>
 
-            <a className='projects-head' href="https://devlit.vercel.app/" target='_blank'>► DevLit</a>
+            <a className='projects-head' href="https://devlit.vercel.app/" target='_blank' rel="noreferrer">► DevLit</a>
             <pre className='projects-content'>{projectOne}</pre>
 
-            <a className='projects-head' href='https://github.com/mukundsolanki/Quizit-the-quiz-app' target='_blank'>► Quizit</a>
+            <a className='projects-head' href='https://github.com/mukundsolanki/Quizit-the-quiz-app' target='_blank' rel="noreferrer">► Quizit</a>
             <pre className='projects-content'>{projectTwo}</pre>
 
-            <a className='projects-head' href='https://github.com/mukundsolanki/QReate-2.0' target='_blank'>► QReate 2.0</a>
+            <a className='projects-head' href='https://github.com/mukundsolanki/QReate-2.0' target='_blank' rel="noreferrer">► QReate 2.0</a>
             <pre className='projects-content'>{projectThree}</pre>
 
-            <a className='projects-head' href='https://github.com/mukundsolanki/CertiCraft' target='_blank'>► CertiCraft</a>
+            <a className='projects-head' href='https://github.com/mukundsolanki/CertiCraft' target='_blank' rel="noreferrer">► CertiCraft</a>
             <pre className='projects-content'>{projectFour}</pre>
 
-            <a className='projects-head' href='https://github.com/mukundsolanki/Peer-Chat' target='_blank'>► Peer-Chat🍐</a>
+            <a className='projects-head' href='https://github.com/mukundsolanki/Peer-Chat' target='_blank' rel="noreferrer">► Peer-Chat🍐</a>
             <pre className='projects-content'>{projectFive}</pre>
 
-            <a className='projects-head' href='https://www.npmjs.com/package/artify-ascii' target='_blank'>► Artify-ascii</a>
+            <a className='projects-head' href='https://www.npmjs.com/package/artify-ascii' target='_blank' rel="noreferrer">► Artify-ascii</a>
             <pre className='projects-content'>{projectSix}</pre>
         </div>
     )
