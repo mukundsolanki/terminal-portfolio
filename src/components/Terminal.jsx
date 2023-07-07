@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 import Intro from './Intro';
+import About from './About';
+import Skills from "./Skills";
+import Socials from "./Socials";
+import Help from './Help';
 
 const Terminal = () => {
     const [input, setInput] = useState('');
@@ -17,28 +21,33 @@ const Terminal = () => {
         // Process input command
         let newOutput = '';
         if (input === 'help') {
-            newOutput =
-                'Available commands:\n' +
-                '  - about\n' +
-                '  - education\n' +
-                '  - skills\n' +
-                '  - socials';
+            newOutput = <Help />;
         } else if (input === 'about') {
-            newOutput = 'About: about text goes here.';
-        } else if (input === 'education') {
-            newOutput = 'Education: education details go here.';
+            newOutput = <About />;
         } else if (input === 'skills') {
-            newOutput = 'Skills: skills go here.';
+            newOutput = <Skills />;
         } else if (input === 'socials') {
-            newOutput = 'Socials: social media links go here.';
-        } else if (input === 'clear') {
+            newOutput = <Socials />;
+        } else if (input === 'github') {
+            newOutput = <p>✔ Opening Github....</p>
+            window.open('https://github.com/mukundsolanki', '_blank');
+        } else if (input === 'source') {
+            newOutput = <p>✔ Opening Source code....</p>
+            window.open('https://github.com/mukundsolanki/terminal-portfolio', '_blank');
+        } else if (input === 'gui') {
+            newOutput = <p>✔ Opening GUI website....</p>
+            window.open('https://mukundsolanki.repl.co', '_blank');
+        } else if (input === 'linkedin') {
+            newOutput = <p>✔ Opening LinkedIn profile....</p>
+            window.open('https://www.linkedin.com/', '_blank');
+        }
+        else if (input === 'clear') {
             setHistory([]);
             setInput('');
             return;
         } else {
-            newOutput = 'Command not found. Type "help" for available commands.';
+            newOutput = <p>Command not found. Type "<span className='commands'>help</span>" for available commands.</p>;
         }
-
         setOutput(newOutput);
         setHistory((prevHistory) => [...prevHistory, { input, output: newOutput }]);
         setInput('');
@@ -66,9 +75,9 @@ const Terminal = () => {
                 {history.map((item, index) => (
                     <div key={index} className="history">
                         <span>
-                            <span className='user'>user69
-                                <span className='symbols'>@</span>
-                                mukund.terminal.dev:
+                            <span className='commands'>user69
+                                <span className='symbols'>💀</span>
+                                <span className='user'>mukund.terminal.dev:</span>
                                 <span className='symbols'>~$</span>
                             </span>
                             <span className='commands'>{item.input}</span>
@@ -88,9 +97,9 @@ const Terminal = () => {
 
             {/* {renderOutput()} */}
             {renderHistory()}
-            <span className='user'>user69
-                <span className='symbols'>@</span>
-                mukund.terminal.dev:
+            <span className='commands'>user69
+                <span className='symbols'>💀</span>
+                <span className='user'>mukund.terminal.dev:</span>
                 <span className='symbols'>~$</span>
             </span>
             <form onSubmit={handleFormSubmit}>
@@ -99,6 +108,7 @@ const Terminal = () => {
                     value={input}
                     onChange={handleInputChange}
                     autoFocus
+                    className="input-text-custom commands"
                 />
             </form>
 
