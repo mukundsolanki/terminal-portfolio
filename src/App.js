@@ -1,4 +1,3 @@
-import './App.css';
 import Terminal from './components/Terminal';
 
 function App() {
