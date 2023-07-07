@@ -4,6 +4,7 @@ import About from './About';
 import Skills from "./Skills";
 import Socials from "./Socials";
 import Help from './Help';
+import Projects from "./Projects";
 
 const Terminal = () => {
     const [input, setInput] = useState('');
@@ -28,17 +29,19 @@ const Terminal = () => {
             newOutput = <Skills />;
         } else if (input === 'socials') {
             newOutput = <Socials />;
+        } else if (input === 'projects') {
+            newOutput = <Projects />;
         } else if (input === 'github') {
-            newOutput = <p>✔ Opening Github....</p>
+            newOutput = <p><span className='user'>[✔]</span> Opening Github....</p>
             window.open('https://github.com/mukundsolanki', '_blank');
         } else if (input === 'source') {
-            newOutput = <p>✔ Opening Source code....</p>
+            newOutput = <p><span className='user'>[✔]</span> Opening Source code....</p>
             window.open('https://github.com/mukundsolanki/terminal-portfolio', '_blank');
         } else if (input === 'gui') {
-            newOutput = <p>✔ Opening GUI website....</p>
+            newOutput = <p><span className='user'>[✔]</span> Opening GUI website....</p>
             window.open('https://mukundsolanki.repl.co', '_blank');
         } else if (input === 'linkedin') {
-            newOutput = <p>✔ Opening LinkedIn profile....</p>
+            newOutput = <p><span className='user'>[✔]</span> Opening LinkedIn profile....</p>
             window.open('https://www.linkedin.com/', '_blank');
         }
         else if (input === 'clear') {
@@ -78,7 +81,7 @@ const Terminal = () => {
                             <span className='commands'>user69
                                 <span className='symbols'>💀</span>
                                 <span className='user'>mukund.terminal.dev:</span>
-                                <span className='symbols'>~$</span>
+                                <span className='symbols'>~$ </span>
                             </span>
                             <span className='commands'>{item.input}</span>
                         </span>
@@ -97,21 +100,22 @@ const Terminal = () => {
 
             {/* {renderOutput()} */}
             {renderHistory()}
-            <span className='commands'>user69
-                <span className='symbols'>💀</span>
-                <span className='user'>mukund.terminal.dev:</span>
-                <span className='symbols'>~$</span>
-            </span>
-            <form onSubmit={handleFormSubmit}>
-                <input
-                    type="text"
-                    value={input}
-                    onChange={handleInputChange}
-                    autoFocus
-                    className="input-text-custom commands"
-                />
-            </form>
-
+            <div className='terminal-spacing'>
+                <span className='commands'>user69
+                    <span className='symbols'>💀</span>
+                    <span className='user'>mukund.terminal.dev:</span>
+                    <span className='symbols'>~$ </span>
+                </span>
+                <form onSubmit={handleFormSubmit}>
+                    <input
+                        type="text"
+                        value={input}
+                        onChange={handleInputChange}
+                        autoFocus
+                        className="input-text-custom commands"
+                    />
+                </form>
+            </div>
         </div>
     );
 };
