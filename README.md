@@ -1,3 +1,5 @@
+![image](https://github.com/mukundsolanki/terminal-portfolio/assets/114515612/416c85c3-48de-4858-9a2c-1f2d9ef91c7b)
+
 # Terminal Portfolio⚡
 
 This is my terminal theme based portfolio website. It is built with React.js and features a terminal theme.
